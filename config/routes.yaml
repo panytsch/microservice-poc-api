@@ -1,0 +1,3 @@
+index:
+   path: /call
+   controller: App\Controller\DefaultController::call
