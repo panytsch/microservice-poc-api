@@ -30,6 +30,14 @@ services:
       - default
       - backend
 
+  redis:
+    container_name: redis
+    image: redis:latest
+    volumes:
+      - ${REDIS_HOST_PATH}:${REDIS_CONTAINER_PATH}
+    networks:
+      - backend
+
   composer:
     container_name: api_composer
     image: composer:latest
